@@ -1,8 +1,8 @@
 # End-to-end Data Science
 
-Showcasing the end-to-end data science pipeline.
+<img src="images/logo.png" width="100%" height="100%" align="middle" />
 
-## Technologies:
+## Technologies
 
 ### Python
 - Flake8
