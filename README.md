@@ -1,6 +1,6 @@
-# End-to-end Data Science
-
 <img src="images/logo.png" width="100%" height="100%" align="middle" />
+
+Showcasing the end-to-end data science pipeline.
 
 ## Technologies
 
