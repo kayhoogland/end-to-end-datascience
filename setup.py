@@ -11,6 +11,7 @@ base_packages = [
     "flake8",
     "black",
     "mypy",
+    "pytest",
 ]
 
 setup(
