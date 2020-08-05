@@ -57,7 +57,7 @@ osqp==0.6.1               # via cvxpy
 packaging==20.4           # via bleach, pytest
 pandas==1.1.0             # via scikit-lego
 pandocfilters==1.4.2      # via nbconvert
-parso==0.7.1              # via jedi
+parso==0.8.0              # via jedi
 pathspec==0.8.0           # via black
 patsy==0.5.1              # via scikit-lego
 pexpect==4.8.0            # via ipython
