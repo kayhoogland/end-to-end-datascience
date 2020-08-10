@@ -22,7 +22,7 @@ defusedxml==0.6.0         # via nbconvert
 deprecated==1.2.10        # via scikit-lego
 ecos==2.0.7.post1         # via cvxpy
 entrypoints==0.3          # via nbconvert
-fastapi==0.60.1           # via src (setup.py)
+fastapi==0.61.0           # via src (setup.py)
 flake8==3.8.3             # via src (setup.py)
 future==0.18.2            # via autograd, osqp
 gin-config==0.3.0         # via src (setup.py)
