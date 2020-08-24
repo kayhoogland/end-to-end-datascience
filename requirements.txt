@@ -55,7 +55,7 @@ numba==0.51.0             # via umap-learn
 numpy==1.19.1             # via autograd, cvxpy, ecos, numba, osqp, pandas, patsy, scikit-learn, scikit-lego, scipy, scs, umap-learn
 osqp==0.6.1               # via cvxpy
 packaging==20.4           # via bleach, pytest
-pandas==1.1.0             # via scikit-lego
+pandas==1.1.1             # via scikit-lego
 pandocfilters==1.4.2      # via nbconvert
 parso==0.8.0              # via jedi
 pathspec==0.8.0           # via black
