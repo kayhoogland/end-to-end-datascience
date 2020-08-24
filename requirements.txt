@@ -94,7 +94,7 @@ toml==0.10.1              # via black, pytest
 tornado==6.0.4            # via ipykernel, jupyter-client, jupyterlab, notebook, terminado
 traitlets==4.3.3          # via ipykernel, ipython, jupyter-client, jupyter-core, nbconvert, nbformat, notebook
 typed-ast==1.4.1          # via black, mypy
-typing-extensions==3.7.4.2  # via mypy
+typing-extensions==3.7.4.3  # via mypy
 umap-learn==0.4.6         # via scikit-lego
 urllib3==1.25.10          # via requests
 wcwidth==0.2.5            # via prompt-toolkit
