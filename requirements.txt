@@ -41,7 +41,7 @@ jupyter-client==6.1.7     # via ipykernel, notebook
 jupyter-core==4.6.3       # via jupyter-client, nbconvert, nbformat, notebook
 jupyterlab-server==1.2.0  # via jupyterlab
 jupyterlab==2.2.5         # via src (setup.py)
-llvmlite==0.33.0          # via numba
+llvmlite==0.34.0          # via numba
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
 mistune==0.8.4            # via nbconvert
