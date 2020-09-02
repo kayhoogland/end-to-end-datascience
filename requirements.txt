@@ -64,7 +64,7 @@ pexpect==4.8.0            # via ipython
 pickleshare==0.7.5        # via ipython
 pluggy==0.13.1            # via pytest
 prometheus-client==0.8.0  # via notebook
-prompt-toolkit==3.0.6     # via ipython
+prompt-toolkit==3.0.7     # via ipython
 ptyprocess==0.6.0         # via pexpect, terminado
 py==1.9.0                 # via pytest
 pycodestyle==2.6.0        # via flake8
