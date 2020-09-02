@@ -37,7 +37,7 @@ jinja2==2.11.2            # via jupyterlab, jupyterlab-server, nbconvert, notebo
 joblib==0.16.0            # via scikit-learn
 json5==0.9.5              # via jupyterlab-server
 jsonschema==3.2.0         # via jupyterlab-server, nbformat
-jupyter-client==6.1.6     # via ipykernel, notebook
+jupyter-client==6.1.7     # via ipykernel, notebook
 jupyter-core==4.6.3       # via jupyter-client, nbconvert, nbformat, notebook
 jupyterlab-server==1.2.0  # via jupyterlab
 jupyterlab==2.2.5         # via src (setup.py)
