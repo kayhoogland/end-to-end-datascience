@@ -82,7 +82,7 @@ regex==2020.7.14          # via black
 requests==2.24.0          # via jupyterlab-server
 scikit-learn==0.23.2      # via scikit-lego, src (setup.py), umap-learn
 scikit-lego==0.5.2        # via src (setup.py)
-scipy==1.5.2              # via cvxpy, ecos, osqp, scikit-learn, scikit-lego, scs, umap-learn
+scipy==1.5.3              # via cvxpy, ecos, osqp, scikit-learn, scikit-lego, scs, umap-learn
 scs==2.1.2                # via cvxpy
 send2trash==1.5.0         # via notebook
 six==1.15.0               # via argon2-cffi, bleach, gin-config, jsonschema, packaging, patsy, pyrsistent, python-dateutil
