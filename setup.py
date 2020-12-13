@@ -12,6 +12,9 @@ base_packages = [
     "black",
     "mypy",
     "pytest",
+    "nb-black",
+    "memo",
+    "pandas-profiling",
 ]
 
 setup(
