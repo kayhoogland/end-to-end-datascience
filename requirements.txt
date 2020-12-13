@@ -42,7 +42,7 @@ ipython==7.18.1           # via ipykernel, ipywidgets, nb-black
 ipywidgets==7.5.1         # via pandas-profiling
 jedi==0.17.2              # via ipython
 jinja2==2.11.2            # via jupyterlab, jupyterlab-server, nbconvert, notebook, pandas-profiling
-joblib==0.16.0            # via pandas-profiling, phik, scikit-learn
+joblib==0.17.0            # via pandas-profiling, phik, scikit-learn
 json5==0.9.5              # via jupyterlab-server
 jsonschema==3.2.0         # via jupyterlab-server, nbformat
 jupyter-client==6.1.7     # via ipykernel, nbclient, notebook
