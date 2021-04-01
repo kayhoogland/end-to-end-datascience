@@ -92,7 +92,7 @@ pycodestyle==2.6.0        # via flake8
 pycparser==2.20           # via cffi
 pydantic==1.6.1           # via fastapi
 pyflakes==2.2.0           # via flake8
-pygments==2.6.1           # via ipython, jupyterlab-pygments, nbconvert, rich
+pygments==2.8.1           # via ipython, jupyterlab-pygments, nbconvert, rich
 pyparsing==2.4.7          # via matplotlib, packaging
 pyrsistent==0.16.0        # via jsonschema
 pytest==6.0.1             # via src (setup.py)
