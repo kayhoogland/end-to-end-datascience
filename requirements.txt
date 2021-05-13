@@ -93,7 +93,7 @@ ptyprocess==0.7.0         # via pexpect, terminado
 py==1.10.0                # via pytest
 pycodestyle==2.7.0        # via flake8
 pycparser==2.20           # via cffi
-pydantic==1.8.1           # via fastapi
+pydantic==1.8.2           # via fastapi
 pyflakes==2.3.1           # via flake8
 pygments==2.8.1           # via ipython, jupyterlab-pygments, nbconvert, rich
 pynndescent==0.5.2        # via umap-learn
