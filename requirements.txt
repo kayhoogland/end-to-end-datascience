@@ -115,7 +115,7 @@ seaborn==0.11.1           # via missingno, pandas-profiling
 send2trash==1.5.0         # via jupyter-server, notebook
 six==1.15.0               # via argon2-cffi, bleach, cycler, imagehash, jsonschema, patsy, python-dateutil
 sniffio==1.2.0            # via anyio
-starlette==0.13.6         # via fastapi
+starlette==0.15.0         # via fastapi
 tangled-up-in-unicode==0.0.7  # via pandas-profiling, visions
 terminado==0.9.4          # via jupyter-server, notebook
 testpath==0.4.4           # via nbconvert
