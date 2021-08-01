@@ -28,7 +28,7 @@ defusedxml==0.7.1         # via nbconvert
 deprecated==1.2.12        # via scikit-lego
 deprecation==2.1.0        # via jupyter-packaging
 entrypoints==0.3          # via nbconvert
-fastapi==0.63.0           # via src (setup.py)
+fastapi==0.68.0           # via src (setup.py)
 flake8==3.9.1             # via src (setup.py)
 future==0.18.2            # via autograd
 gin-config==0.4.0         # via src (setup.py)
