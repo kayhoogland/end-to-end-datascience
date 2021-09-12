@@ -85,7 +85,7 @@ patsy==0.5.1              # via scikit-lego
 pexpect==4.8.0            # via ipython
 phik==0.11.2              # via pandas-profiling
 pickleshare==0.7.5        # via ipython
-pillow==8.2.0             # via imagehash, matplotlib, visions
+pillow==8.3.2             # via imagehash, matplotlib, visions
 pluggy==0.13.1            # via pytest
 prometheus-client==0.10.1  # via jupyter-server, notebook
 prompt-toolkit==3.0.18    # via ipython
