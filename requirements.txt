@@ -129,7 +129,7 @@ typed-ast==1.4.3          # via black, mypy
 typing-extensions==3.7.4.3  # via anyio, black, importlib-metadata, mypy, pydantic, rich
 umap-learn==0.5.1         # via scikit-lego
 urllib3==1.26.4           # via requests
-visions[type_image_path]==0.6.0  # via pandas-profiling
+visions[type_image_path]==0.7.4  # via pandas-profiling
 wcwidth==0.2.5            # via prompt-toolkit
 webencodings==0.5.1       # via bleach
 wheel==0.36.2             # via jupyter-packaging
