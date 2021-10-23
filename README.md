@@ -3,9 +3,7 @@
 
 <img src="images/logo.png" width="100%" height="100%" align="middle" />
 
-
-
-Showcasing the end-to-end data science pipeline.
+Personal Git repository to play with packages and test stuff out.
 
 ## Technologies
 
@@ -14,7 +12,8 @@ Showcasing the end-to-end data science pipeline.
 - Mypy
 - Black
 - Gin-config
-- Pip-tools
+- Poetry
+- MLFlow
 
 ### Data Science
 - Scikit-learn
@@ -22,7 +21,7 @@ Showcasing the end-to-end data science pipeline.
 - Pytest
 
 ### Deployment
-- FastAPI
+- MLFlow
 - Docker
 
 ### CI / CD
