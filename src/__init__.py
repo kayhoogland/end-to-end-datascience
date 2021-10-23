@@ -1,2 +1,3 @@
-def foo() -> str:
-    return "foo"
+from src import train
+
+__all__ = ['train']

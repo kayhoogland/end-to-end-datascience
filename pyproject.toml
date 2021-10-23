@@ -10,15 +10,17 @@ fastapi = "^0.70.0"
 scikit-learn = "^1.0"
 scikit-lego = "^0.6.8"
 gin-config = "^0.4.0"
+mlflow = "^1.20.2"
+
+[tool.poetry.dev-dependencies]
 jupyterlab = "^3.2.1"
 flake8 = "^4.0.1"
 black = "^21.9b0"
 mypy = "^0.910"
 pytest = "^6.2.5"
-nb-black = "^1.0.7"
-memo = "pandas-profiling"
-
-[tool.poetry.dev-dependencies]
+memo = "^0.2.2"
+pylint = "^2.11.1"
+ipython = "^7.28.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
