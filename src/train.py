@@ -10,7 +10,8 @@ def train():
     X, y = data.return_X_y(df)
 
     model = linear_model.LogisticRegression()
-    model.fit(X, y)
+    pipeline = modelling.create_pipeline(model)
+    pipeline.fit(X, y)
 
     mlflow.sklearn.save_model(model, "model")
-    return True
+    return pipeline
