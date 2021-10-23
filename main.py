@@ -8,5 +8,6 @@ app = typer.Typer()
 def train_model():
     train.train()
 
+
 if __name__ == "__main__":
     app()
