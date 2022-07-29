@@ -230,7 +230,7 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
+test = ["hypothesis (==3.55.3)", "flake8 (==3.7.8)"]
 
 [[package]]
 name = "databricks-cli"
@@ -383,12 +383,12 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-pytorch-nightly = ["pytorch-nightly"]
-tensorflow = ["tensorflow (>=1.13.0)"]
-tensorflow-gpu = ["tensorflow-gpu (>=1.13.0)"]
-testing = ["absl-py (>=0.1.6)", "mock (>=3.0.5)", "nose"]
-tf-nightly = ["tf-nightly"]
 torch = ["torch (>=1.3.0)"]
+tf-nightly = ["tf-nightly"]
+testing = ["nose", "mock (>=3.0.5)", "absl-py (>=0.1.6)"]
+tensorflow-gpu = ["tensorflow-gpu (>=1.13.0)"]
+tensorflow = ["tensorflow (>=1.13.0)"]
+pytorch-nightly = ["pytorch-nightly"]
 
 [[package]]
 name = "gitdb"
@@ -721,17 +721,6 @@ test = ["coverage", "pytest (>=6.0)", "pytest-cov", "pytest-console-scripts", "p
 ui-tests = ["build"]
 
 [[package]]
-name = "jupyterlab-pygments"
-version = "0.1.2"
-description = "Pygments theme using JupyterLab CSS variables"
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-pygments = ">=2.4.1,<3"
-
-[[package]]
 name = "jupyterlab-server"
 version = "2.10.3"
 description = "A set of server components for JupyterLab and JupyterLab like applications ."
@@ -824,14 +813,14 @@ orjson = ">=3.4.5"
 rich = ">=9.2.0"
 
 [package.extras]
-dev = ["flake8 (>=3.6.0)", "joblib (>=1.0.1)", "jupyter (>=1.0.0)", "jupyterlab (>=0.35.4)", "mkdocs-material (==6.1.6)", "mkdocs (==1.1.2)", "mkdocstrings (==0.13.6)", "mktestdocs (>=0.1.0)", "numpy (>=1.19.4)", "orjson (>=3.4.5)", "pre-commit (>=2.17.0)", "pytest (>=4.0.2)", "rich (>=9.2.0)", "tqdm (>=4.54.0)"]
-test = ["flake8 (>=3.6.0)", "joblib (>=1.0.1)", "mktestdocs (>=0.1.0)", "numpy (>=1.19.4)", "orjson (>=3.4.5)", "pre-commit (>=2.17.0)", "pytest (>=4.0.2)", "rich (>=9.2.0)", "tqdm (>=4.54.0)"]
-web = ["httpx (>=0.16.1)", "joblib (>=1.0.1)", "orjson (>=3.4.5)", "rich (>=9.2.0)"]
+web = ["rich (>=9.2.0)", "orjson (>=3.4.5)", "joblib (>=1.0.1)", "httpx (>=0.16.1)"]
+test = ["tqdm (>=4.54.0)", "rich (>=9.2.0)", "pytest (>=4.0.2)", "pre-commit (>=2.17.0)", "orjson (>=3.4.5)", "numpy (>=1.19.4)", "mktestdocs (>=0.1.0)", "joblib (>=1.0.1)", "flake8 (>=3.6.0)"]
+dev = ["tqdm (>=4.54.0)", "rich (>=9.2.0)", "pytest (>=4.0.2)", "pre-commit (>=2.17.0)", "orjson (>=3.4.5)", "numpy (>=1.19.4)", "mktestdocs (>=0.1.0)", "mkdocstrings (==0.13.6)", "mkdocs (==1.1.2)", "mkdocs-material (==6.1.6)", "jupyterlab (>=0.35.4)", "jupyter (>=1.0.0)", "joblib (>=1.0.1)", "flake8 (>=3.6.0)"]
 
 [[package]]
 name = "mistune"
-version = "0.8.4"
-description = "The fastest markdown parser in pure Python"
+version = "2.0.3"
+description = "A sane Markdown parser with useful plugins and renderers"
 category = "dev"
 optional = false
 python-versions = "*"
@@ -916,30 +905,12 @@ notebook-shim = ">=0.1.0"
 test = ["pytest", "pytest-tornasync", "pytest-console-scripts"]
 
 [[package]]
-name = "nbclient"
-version = "0.5.11"
-description = "A client library for executing notebooks. Formerly nbconvert's ExecutePreprocessor."
-category = "dev"
-optional = false
-python-versions = ">=3.7.0"
-
-[package.dependencies]
-jupyter-client = ">=6.1.5"
-nbformat = ">=5.0"
-nest-asyncio = "*"
-traitlets = ">=4.2"
-
-[package.extras]
-sphinx = ["Sphinx (>=1.7)", "sphinx-book-theme", "mock", "moto", "myst-parser"]
-test = ["ipython (<8.0.0)", "ipykernel", "ipywidgets (<8.0.0)", "pytest (>=4.1)", "pytest-asyncio", "pytest-cov (>=2.6.1)", "check-manifest", "flake8", "mypy", "xmltodict", "black", "pip (>=18.1)", "wheel (>=0.31.0)", "setuptools (>=38.6.0)", "twine (>=1.11.0)"]
-
-[[package]]
 name = "nbconvert"
-version = "6.4.2"
+version = "5.5.0"
 description = "Converting Jupyter Notebooks"
 category = "dev"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.dependencies]
 bleach = "*"
@@ -947,21 +918,19 @@ defusedxml = "*"
 entrypoints = ">=0.2.2"
 jinja2 = ">=2.4"
 jupyter-core = "*"
-jupyterlab-pygments = "*"
-mistune = ">=0.8.1,<2"
-nbclient = ">=0.5.0,<0.6.0"
+mistune = ">=0.8.1"
 nbformat = ">=4.4"
 pandocfilters = ">=1.4.1"
-pygments = ">=2.4.1"
+pygments = "*"
 testpath = "*"
-traitlets = ">=5.0"
+traitlets = ">=4.2"
 
 [package.extras]
-all = ["pytest", "pytest-cov", "pytest-dependency", "ipykernel", "ipywidgets (>=7)", "pyppeteer (>=1,<1.1)", "tornado (>=4.0)", "sphinx (>=1.5.1)", "sphinx-rtd-theme", "nbsphinx (>=0.2.12)", "ipython"]
-docs = ["sphinx (>=1.5.1)", "sphinx-rtd-theme", "nbsphinx (>=0.2.12)", "ipython"]
+all = ["pytest", "pytest-cov", "ipykernel", "jupyter-client (>=4.2)", "ipywidgets (>=7)", "tornado (>=4.0)", "sphinx (>=1.5.1)", "sphinx-rtd-theme", "nbsphinx (>=0.2.12)", "sphinxcontrib-github-alt", "ipython"]
+docs = ["sphinx (>=1.5.1)", "sphinx-rtd-theme", "nbsphinx (>=0.2.12)", "sphinxcontrib-github-alt", "ipython", "jupyter-client (>=4.2)"]
+execute = ["jupyter-client (>=4.2)"]
 serve = ["tornado (>=4.0)"]
-test = ["pytest", "pytest-cov", "pytest-dependency", "ipykernel", "ipywidgets (>=7)", "pyppeteer (>=1,<1.1)"]
-webpdf = ["pyppeteer (>=1,<1.1)"]
+test = ["pytest", "pytest-cov", "ipykernel", "jupyter-client (>=4.2)", "ipywidgets (>=7)"]
 
 [[package]]
 name = "nbformat"
@@ -1031,7 +1000,7 @@ python-versions = ">=3.7"
 jupyter-server = ">=1.8,<2.0"
 
 [package.extras]
-test = ["pytest", "pytest-tornasync", "pytest-console-scripts"]
+test = ["pytest-console-scripts", "pytest-tornasync", "pytest"]
 
 [[package]]
 name = "numba"
@@ -1126,7 +1095,7 @@ numpy = ">=1.4"
 six = "*"
 
 [package.extras]
-test = ["pytest", "pytest-cov", "scipy"]
+test = ["scipy", "pytest-cov", "pytest"]
 
 [[package]]
 name = "pexpect"
@@ -1168,8 +1137,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-dev = ["pre-commit", "tox"]
-testing = ["pytest", "pytest-benchmark"]
+testing = ["pytest-benchmark", "pytest"]
+dev = ["tox", "pre-commit"]
 
 [[package]]
 name = "prometheus-client"
@@ -1459,10 +1428,10 @@ scipy = ">=1.1.0"
 threadpoolctl = ">=2.0.0"
 
 [package.extras]
-benchmark = ["matplotlib (>=2.2.3)", "pandas (>=0.25.0)", "memory-profiler (>=0.57.0)"]
-docs = ["matplotlib (>=2.2.3)", "scikit-image (>=0.14.5)", "pandas (>=0.25.0)", "seaborn (>=0.9.0)", "memory-profiler (>=0.57.0)", "sphinx (>=4.0.1)", "sphinx-gallery (>=0.7.0)", "numpydoc (>=1.0.0)", "Pillow (>=7.1.2)", "sphinx-prompt (>=1.3.0)", "sphinxext-opengraph (>=0.4.2)"]
-examples = ["matplotlib (>=2.2.3)", "scikit-image (>=0.14.5)", "pandas (>=0.25.0)", "seaborn (>=0.9.0)"]
-tests = ["matplotlib (>=2.2.3)", "scikit-image (>=0.14.5)", "pandas (>=0.25.0)", "pytest (>=5.0.1)", "pytest-cov (>=2.9.0)", "flake8 (>=3.8.2)", "black (>=21.6b0)", "mypy (>=0.770)", "pyamg (>=4.0.0)"]
+tests = ["pyamg (>=4.0.0)", "mypy (>=0.770)", "black (>=21.6b0)", "flake8 (>=3.8.2)", "pytest-cov (>=2.9.0)", "pytest (>=5.0.1)", "pandas (>=0.25.0)", "scikit-image (>=0.14.5)", "matplotlib (>=2.2.3)"]
+examples = ["seaborn (>=0.9.0)", "pandas (>=0.25.0)", "scikit-image (>=0.14.5)", "matplotlib (>=2.2.3)"]
+docs = ["sphinxext-opengraph (>=0.4.2)", "sphinx-prompt (>=1.3.0)", "Pillow (>=7.1.2)", "numpydoc (>=1.0.0)", "sphinx-gallery (>=0.7.0)", "sphinx (>=4.0.1)", "memory-profiler (>=0.57.0)", "seaborn (>=0.9.0)", "pandas (>=0.25.0)", "scikit-image (>=0.14.5)", "matplotlib (>=2.2.3)"]
+benchmark = ["memory-profiler (>=0.57.0)", "pandas (>=0.25.0)", "matplotlib (>=2.2.3)"]
 
 [[package]]
 name = "scikit-lego"
@@ -1508,9 +1477,9 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-nativelib = ["pyobjc-framework-cocoa", "pywin32"]
-objc = ["pyobjc-framework-cocoa"]
 win32 = ["pywin32"]
+objc = ["pyobjc-framework-cocoa"]
+nativelib = ["pywin32", "pyobjc-framework-cocoa"]
 
 [[package]]
 name = "six"
@@ -1590,7 +1559,7 @@ executing = "*"
 pure-eval = "*"
 
 [package.extras]
-tests = ["pytest", "typeguard", "pygments", "littleutils", "cython"]
+tests = ["cython", "littleutils", "pygments", "typeguard", "pytest"]
 
 [[package]]
 name = "starlette"
@@ -1691,10 +1660,10 @@ python-versions = ">=3.6"
 click = ">=7.1.1,<9.0.0"
 
 [package.extras]
-all = ["colorama (>=0.4.3,<0.5.0)", "shellingham (>=1.3.0,<2.0.0)"]
-dev = ["autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)"]
-doc = ["mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=5.4.0,<6.0.0)", "markdown-include (>=0.5.1,<0.6.0)"]
-test = ["shellingham (>=1.3.0,<2.0.0)", "pytest (>=4.4.0,<5.4.0)", "pytest-cov (>=2.10.0,<3.0.0)", "coverage (>=5.2,<6.0)", "pytest-xdist (>=1.32.0,<2.0.0)", "pytest-sugar (>=0.9.4,<0.10.0)", "mypy (==0.910)", "black (>=19.10b0,<20.0b0)", "isort (>=5.0.6,<6.0.0)"]
+test = ["isort (>=5.0.6,<6.0.0)", "black (>=19.10b0,<20.0b0)", "mypy (==0.910)", "pytest-sugar (>=0.9.4,<0.10.0)", "pytest-xdist (>=1.32.0,<2.0.0)", "coverage (>=5.2,<6.0)", "pytest-cov (>=2.10.0,<3.0.0)", "pytest (>=4.4.0,<5.4.0)", "shellingham (>=1.3.0,<2.0.0)"]
+doc = ["markdown-include (>=0.5.1,<0.6.0)", "mkdocs-material (>=5.4.0,<6.0.0)", "mkdocs (>=1.1.2,<2.0.0)"]
+dev = ["flake8 (>=3.8.3,<4.0.0)", "autoflake (>=1.3.1,<2.0.0)"]
+all = ["shellingham (>=1.3.0,<2.0.0)", "colorama (>=0.4.3,<0.5.0)"]
 
 [[package]]
 name = "typing-extensions"
@@ -1744,8 +1713,8 @@ optional = false
 python-versions = ">=3.7.0"
 
 [package.extras]
-docs = ["Sphinx (>=1.8.1)", "docutils", "pylons-sphinx-themes (>=1.0.9)"]
-testing = ["pytest", "pytest-cover", "coverage (>=5.0)"]
+testing = ["coverage (>=5.0)", "pytest-cover", "pytest"]
+docs = ["pylons-sphinx-themes (>=1.0.9)", "docutils", "Sphinx (>=1.8.1)"]
 
 [[package]]
 name = "wcwidth"
@@ -1772,9 +1741,9 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-docs = ["Sphinx (>=3.4)", "sphinx-rtd-theme (>=0.5)"]
-optional = ["python-socks", "wsaccel"]
 test = ["websockets"]
+optional = ["wsaccel", "python-socks"]
+docs = ["sphinx-rtd-theme (>=0.5)", "Sphinx (>=3.4)"]
 
 [[package]]
 name = "werkzeug"
@@ -2171,10 +2140,6 @@ jupyterlab = [
     {file = "jupyterlab-3.3.0-py3-none-any.whl", hash = "sha256:e0b85a9f8087e9d938fec5ceb6beb87cca038455404c48a503c633d9774c480b"},
     {file = "jupyterlab-3.3.0.tar.gz", hash = "sha256:c7a1997bebf5487f8c17587f519039125014d122cdd5d60beffad4b266da330f"},
 ]
-jupyterlab-pygments = [
-    {file = "jupyterlab_pygments-0.1.2-py2.py3-none-any.whl", hash = "sha256:abfb880fd1561987efaefcb2d2ac75145d2a5d0139b1876d5be806e32f630008"},
-    {file = "jupyterlab_pygments-0.1.2.tar.gz", hash = "sha256:cfcda0873626150932f438eccf0f8bf22bfa92345b814890ab360d666b254146"},
-]
 jupyterlab-server = [
     {file = "jupyterlab_server-2.10.3-py3-none-any.whl", hash = "sha256:62f3c598f1d48dfb9b27729ed17772e38115cbe61e7d60fe68a853791bdf1038"},
     {file = "jupyterlab_server-2.10.3.tar.gz", hash = "sha256:3fb84a5813d6d836ceda773fb2d4e9ef3c7944dbc1b45a8d59d98641a80de80a"},
@@ -2304,8 +2269,8 @@ memo = [
     {file = "memo-0.2.3.tar.gz", hash = "sha256:a167c7ffe7688521c13306dad4954f9e7dfe3a4ad9388ebea17b1286fe9e57c8"},
 ]
 mistune = [
-    {file = "mistune-0.8.4-py2.py3-none-any.whl", hash = "sha256:88a1051873018da288eee8538d476dffe1262495144b33ecb586c4ab266bb8d4"},
-    {file = "mistune-0.8.4.tar.gz", hash = "sha256:59a3429db53c50b5c6bcc8a07f8848cb00d7dc8bdb431a4ab41920d201d4756e"},
+    {file = "mistune-2.0.3-py2.py3-none-any.whl", hash = "sha256:e3964140c0775535fba50bd616fe180920044a64bc21850253267b07bff89924"},
+    {file = "mistune-2.0.3.tar.gz", hash = "sha256:d7605b46b6156b53b7d52a465202b29a6f00f4ea4130ad5d25e9d5547d6b7e50"},
 ]
 mlflow = [
     {file = "mlflow-1.24.0-py3-none-any.whl", hash = "sha256:0c91eeec316b82e201b3cd6e38161625553b8e7c8bdcbe50ea3fe8fc151d9fc7"},
@@ -2344,13 +2309,9 @@ nbclassic = [
     {file = "nbclassic-0.3.6-py3-none-any.whl", hash = "sha256:fd150c1aafb626a395fd5a9ce5ae0e82c4db91ae38bc3d4cb0bdc66c367ede1d"},
     {file = "nbclassic-0.3.6.tar.gz", hash = "sha256:7dbac0a6cb71bbe3afa1fe89369e6e3174d89f42aa08216a327046de45aa9a4f"},
 ]
-nbclient = [
-    {file = "nbclient-0.5.11-py3-none-any.whl", hash = "sha256:03e857bea3012377289daa1e1c1651f4fc0295bcd109ccd36a337efcdbebaed7"},
-    {file = "nbclient-0.5.11.tar.gz", hash = "sha256:751516992f34b58172bad54eef1e4bf7e4f4460d58e255ca1a4e5c9649476007"},
-]
 nbconvert = [
-    {file = "nbconvert-6.4.2-py3-none-any.whl", hash = "sha256:7b006ae9979af56200e7fa3db39d9d12c99e811e8843b05dbe518e5b754bcb2e"},
-    {file = "nbconvert-6.4.2.tar.gz", hash = "sha256:eb2803db18f6facce6bf3b01b684fe47907994bd156d15eaccdf011e3d7f8164"},
+    {file = "nbconvert-5.5.0-py2.py3-none-any.whl", hash = "sha256:4a978548d8383f6b2cfca4a3b0543afb77bc7cb5a96e8b424337ab58c12da9bc"},
+    {file = "nbconvert-5.5.0.tar.gz", hash = "sha256:138381baa41d83584459b5cfecfc38c800ccf1f37d9ddd0bd440783346a4c39c"},
 ]
 nbformat = [
     {file = "nbformat-5.1.3-py3-none-any.whl", hash = "sha256:eb8447edd7127d043361bc17f2f5a807626bc8e878c7709a1c647abda28a9171"},
